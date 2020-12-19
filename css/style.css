@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root {
+  --Violet: hsl(257, 40%, 49%);
+  --SoftMagenta: hsl(300, 69%, 71%);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+
+
+body {
+  font-family: 'Open Sans', sans-serif; 
+  background-color: var(--Violet);
+  background-image: url(/images/bg-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
+  min-height: 100vh;
+  color:#fff;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-wrapper{
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem;
+}
+
+.logo{
+  margin-bottom: 3.1rem;
+}
+
+.logo .logo-img {
+  width: 8rem;
+}
+
+.huddle-website .site-picture {
+  width: 100%;
+}
+
+.right-side {
+  text-align: center;
+}
+.heading {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  margin-top: 3rem;
+}
+
+.content {
+  margin-bottom: 1.2rem;
+  margin-top: 1rem;
+  font-size: 1.08rem;
+}
+
+.rigister-btn {
+  border-radius: 50px;
+  padding: .7rem 3.7rem;
+  color: var(--Violet);
+  outline: none;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgb(0,0,0,.2);
+  transition: ease-in .5s;
+}
+.rigister-btn:hover{
+  color: #fff;
+  background-color: var(--SoftMagenta);
+  box-shadow: 0 6px 12px rgb(0,0,0,.3);
+  
+}
+
+.social-links {
+  margin-top: 3rem;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  
+}
+
+.social-links li:not(:last-child) {
+  padding-right: 10px;
+}
+
+.social-links li a {
+  display: inline-flex;
+  height: 40px;
+  width: 40px;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.social-links a:hover {
+  border-color: hsl(300, 84%, 58%);
+}
+.fab {
+  color: #fff;
+}
+
+.social-links a .fab:hover {
+  color: hsl(300, 84%, 58%);
+}
+
+@media only screen and (min-width: 950px){
+  body {
+    background-image: url(/images/bg-desktop.svg);
+    background-position: left;
+  
+  }
+
+  .flex-wrapper {
+    flex-direction: row;
+    margin-left: 1rem;
+    margin-top: 0;
+  }
+
+  .logo .logo-img {
+    width: 10rem;
+    margin-top: 5.2rem;
+  }
+
+  .huddle-website .site-picture {
+    width: 100%;
+    flex: 1;
+  }
+
+  .left-side {
+    flex: .46;
+    margin-left: 2.5rem;
+
+  }
+
+  .right-side {
+    flex: .54; 
+    text-align: left;
+    margin-left: 2rem;
+    max-width: 34%;
+  }
+
+  .heading {
+    margin-top: 13rem;
+    font-size: 2.3rem;
+  }
+  .content {
+    font-size: 1.05rem;
+    opacity: .70;
+    margin-top: 1.5rem;
+  }
+
+  .social-links {
+    margin-top: 12rem;
+    justify-content: flex-end;
+  }
+}
